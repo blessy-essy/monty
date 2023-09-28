@@ -41,12 +41,12 @@ int main(int argc, char **argv)
 			continue;
 		}
 
-		get_op_function = op_function(token.list[0]);
-		if (get_op_function == NULL)
+		get_op_func = op_func(token.list[0]);
+		if (get_op_func == NULL)
 		{
 			dprintf(2, "L%u: unknown instruction %s\n", custom_line_index,
 					token.list[0]);
-			exit_status_codes();
+			exit_status();
 		}
 
 		get_op_func(&stack, custom_line_index);

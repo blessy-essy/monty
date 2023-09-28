@@ -20,10 +20,10 @@ void custom_mod(stack_t **custom_stack, unsigned int custom_line_index)
 
 	if ((*custom_stack)->n == 0)
 	{
-		dprintf(2, "L%u: division by zero\n", custom_line_number);
+		dprintf(2, "L%u: division by zero\n", custom_line_index);
 		exit(EXIT_FAILURE);
 	}
 
 	custom_ptr2->n = custom_ptr2->n % (*custom_stack)->n;
-	custom_pop(custom_stack, custom_line_number);
+	custom_pop(custom_stack, custom_line_index);
 }

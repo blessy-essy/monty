@@ -8,6 +8,6 @@
 void f_stack(stack_t **custom_stack, unsigned int custom_line_index)
 {
 	(void)custom_stack;
-	(void)counter_line_index;
+	(void)custom_line_index;
 	bus.lifi = 0;
 }
